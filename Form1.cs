@@ -29,10 +29,13 @@ namespace CSharp_Design_UI
 
             // Form 無邊框
             this.FormBorderStyle = FormBorderStyle.None;
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
             plFormBar.MouseDown += panelFormBar_MouseDown;
             btnCancel.Click += btnCancel_Click;
             btnMaximize.Click += btnMaximize_Click;
             btnMinimize.Click += btnMinimize_Click;
+
 
             // 點擊會改變主題顏色
             random = new Random();
